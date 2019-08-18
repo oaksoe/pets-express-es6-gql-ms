@@ -1,0 +1,26 @@
+{
+    "owners": [
+      {
+        "id": "1",
+        "name": "Oak",
+        "address": "Subang Jaya",
+        "phone": "0123456789",
+        "email": "oak@gmail.com"
+      },
+      {
+        "id": "2",
+        "name": "John",
+        "address": "Petaling Jaya",
+        "phone": "0129876543",
+        "email": "john@gmail.com"
+      },
+      {
+        "id": "2",
+        "name": "Amelia",
+        "address": "Penang",
+        "phone": "0192345678",
+        "email": "amelia@gmail.com"
+      }
+    ],
+    "pets": []
+}
