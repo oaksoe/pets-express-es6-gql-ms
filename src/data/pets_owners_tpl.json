@@ -22,5 +22,22 @@
         "email": "amelia@gmail.com"
       }
     ],
-    "pets": []
+    "pets": [
+      {
+        "id": "1",
+        "ownerId": "1",
+        "name": "Kitty",
+        "colour": "Yellow",
+        "age": 1,
+        "breed": "Asian"
+      },
+      {
+        "id": "2",
+        "ownerId": "1",
+        "name": "Brownie",
+        "colour": "brown",
+        "age": 2,
+        "breed": "Dalmation"
+      }
+    ]
 }

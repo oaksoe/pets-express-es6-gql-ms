@@ -1,1 +1,43 @@
-{"owners":[{"id":"1","name":"Oak","address":"Subang Jaya","phone":"0123456789","email":"oak@gmail.com"},{"id":"2","name":"John","address":"Petaling Jaya","phone":"0129876543","email":"john@gmail.com"},{"id":"2","name":"Amelia","address":"Penang","phone":"0192345678","email":"amelia@gmail.com"}],"pets":[{"id":"ff3c70b6-3dcf-4949-b00d-a38e744a7221","ownerId":"2","name":"Meow Meow","colour":"Black","age":2,"breed":"Persian"},{"id":"f1ca1c01-f495-4f29-b124-320c0d4857b1","ownerId":"3","name":"Meow Meow Meow","colour":"Black & White","age":2,"breed":"Asian"},{"id":"c0ed944f-f317-43b9-8921-9c7a21f6473d","ownerId":"2","name":"Meow Meow","colour":"Black","age":2,"breed":"Persian"},{"id":"29c80bd4-e953-4884-9529-38d5ece1e250","ownerId":"2","name":"Meow Meow Meow","colour":"Black & White","age":2,"breed":"Asian"}]}
+{
+    "owners": [
+      {
+        "id": "1",
+        "name": "Oak",
+        "address": "Subang Jaya",
+        "phone": "0123456789",
+        "email": "oak@gmail.com"
+      },
+      {
+        "id": "2",
+        "name": "John",
+        "address": "Petaling Jaya",
+        "phone": "0129876543",
+        "email": "john@gmail.com"
+      },
+      {
+        "id": "2",
+        "name": "Amelia",
+        "address": "Penang",
+        "phone": "0192345678",
+        "email": "amelia@gmail.com"
+      }
+    ],
+    "pets": [
+      {
+        "id": "1",
+        "ownerId": "1",
+        "name": "Kitty",
+        "colour": "Yellow",
+        "age": 1,
+        "breed": "Asian"
+      },
+      {
+        "id": "2",
+        "ownerId": "1",
+        "name": "Brownie",
+        "colour": "brown",
+        "age": 2,
+        "breed": "Dalmation"
+      }
+    ]
+}
