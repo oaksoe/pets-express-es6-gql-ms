@@ -28,12 +28,13 @@ const schema = buildSchema(`
         address: String
         phone: String
         email: String
+        pets: [Pet]
     },    
     type Query {
         getOwners: [Owner]
         getPets: [Pet]
         getPet(id: String!): Pet
-        getPetsByOwner(ownerId: String!): [Pet]
+        getOwnerPets(ownerId: String!): Owner
     },
     type Mutation {
         createPet(pet: PetInput): Pet
@@ -47,7 +48,7 @@ const root = {
     getOwners: petController.getOwners,
     getPets: petController.getPets,
     getPet: petController.getPet,
-    getPetsByOwner: petController.getPetsByOwner
+    getOwnerPets: petController.getOwnerPets
 };
 
 const app = express();

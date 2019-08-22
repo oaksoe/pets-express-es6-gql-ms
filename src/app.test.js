@@ -27,15 +27,37 @@ describe('GraphQL', () => {
         })
     })
 
-    it('Returns pet by owner', (done) => {
+    it('Returns owner and his pets', (done) => {
         chai.request(server).post('/graphql')
-        .send({ query: `{ getPetsByOwner(ownerId: "1") { name colour age breed } }`})
+        .send({ query: `{ getOwnerPets(ownerId: "1") { 
+            name
+            address 
+            phone
+            email
+            pets {
+                id
+                ownerId
+                name
+                colour
+                age
+                breed
+            }
+        } }`})
         .end((err,res) => {
             if (err) return done(err);
             
-            const pets = res.body.data.getPetsByOwner;
-            expect(pets.length).to.equal(1);
-            
+            const owner = res.body.data.getOwnerPets;
+            owner.should.have.property('name');
+            owner.should.have.property('address');
+            owner.should.have.property('phone');
+            owner.should.have.property('email');
+
+            expect(owner.name).to.equal('Oak');
+            expect(owner.address).to.equal('Subang Jaya');
+            expect(owner.phone).to.equal('0123456789');
+            expect(owner.email).to.equal('oak@gmail.com');
+            expect(owner.pets.length).to.equal(2);
+
             done();
         })
     })

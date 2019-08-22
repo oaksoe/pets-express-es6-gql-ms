@@ -32,15 +32,24 @@ query getPet {
   }
 }
 
-query getPetsByOwner {
-  getPetsByOwner(ownerId:"2") {
+query getOwnerPets {
+  getOwnerPets(ownerId:"1") {
     id,
     name,
-    colour,
-    age,
-    breed,
+    address,
+    phone,
+    email,
+    pets {
+      id,
+      ownerId,
+      name,
+      colour,
+      age,
+      breed
+    }
   }
 }
+
 
 mutation createPet($input: PetInput) {
   createPet(pet: $input) {

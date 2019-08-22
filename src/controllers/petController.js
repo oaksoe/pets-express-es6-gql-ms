@@ -1,6 +1,7 @@
 import * as fsJson from '../utils/fsJson';
 import * as uuid from '../utils/uuid';
 import { Pet } from '../models/petModel';
+import { Owner } from '../models/ownerModel';
 
 const filePath = 'src/data/pets_owners.json';
 
@@ -53,7 +54,10 @@ export async function getPet({id}) {
     return petsOwners.pets.find(pet => pet.id === id);
 };
 
-export async function getPetsByOwner({ownerId}) {
+export async function getOwnerPets({ownerId}) {
     const petsOwners = await fsJson.readFileAsync(filePath);
-    return petsOwners.pets.filter(pet => pet.ownerId === ownerId);
+    const owner = petsOwners.owners.find(owner => owner.id === ownerId);
+    const pets = petsOwners.pets.filter(pet => pet.ownerId === ownerId);
+    owner.pets = pets;
+    return owner;
 };
